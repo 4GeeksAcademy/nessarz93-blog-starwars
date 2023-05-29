@@ -22,13 +22,6 @@ export const Home = () => {
 		.then( (data) => setPlanets(data.results))
 	}
 
-	/*const [imgPeople, setImgPeople] = useState([]);
-	function getImgPeople(){
-	fetch('https://starwars-visualguide.com/assets/img/characters')
-	.then( (response) => response.json())
-	.then( (data) => setImgPeople(data.results))
-	}*/
-
 //Iniciar API al cargar la página -Personajes
 	useEffect(()=> {
 		getPeople()
@@ -37,12 +30,6 @@ export const Home = () => {
 	useEffect(()=> {
 		getPlanets()
 	},[]);
-
-	/*useEffect(()=> {
-		getImgPeople()
-	},[]);*/
-
-
 
 
 	//Aquí empieza el body
