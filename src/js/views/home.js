@@ -38,13 +38,13 @@ export const Home = () => {
 		{/*Espacio para personajes*/}
 		<h2 className="text-danger m-3">Characters</h2>
 		<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
-				{people.map( (ppl) => <CardCharacter className="col-xs-4" key={ppl.uid} idc={ppl.name} name={ppl.name} gender={ppl.gender} hair_color={ppl.hair_color} eye_color={ppl.eye_color}/>)}
+				{people.map( (ppl) => <CardCharacter className="col-xs-4"  idc={ppl.name} name={ppl.name} gender={ppl.gender} hair_color={ppl.hair_color} eye_color={ppl.eye_color}/>)}
 		</div>
 
 		{/*Espacio para Planetas*/}
 		<h2 className="text-danger m-3">Planets</h2>
 		<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
-				{planets.map( (planet)=> <CardPlanet className="col-xs-4" name={planet.name} population={planet.population} terrain={planet.terrain}/>)}
+				{planets.map( (planet)=> <CardPlanet className="col-xs-4" idc={planet.name} name={planet.name} population={planet.population} terrain={planet.terrain}/>)}
 		</div>
 		
 	</div>

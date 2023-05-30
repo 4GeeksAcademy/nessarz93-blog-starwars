@@ -5,7 +5,7 @@ export const CardCharacter = (props) => {
 	return (
         <>
             <div className="card m-2" style={{width: "18rem"}}>
-                <img src="..." className="card-img-top" alt="..."/>
+                <img src="https://isccoquimbo.cl/images/400X200.gif" className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">

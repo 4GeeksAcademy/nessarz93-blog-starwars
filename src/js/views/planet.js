@@ -3,23 +3,22 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const Planet = props => {
 
-	const { store, actions } = useContext(Context);
-	const params = useParams();
-
-	const [personaje, setPersonaje] = useState({});
-	function getPpl(){
+	const [planets1, setPlanets1] = useState({});
+	function getPlanets1(){
 		console.log('getPpl')
-		fetch('https://swapi.dev/api/people/'+ params.theid)
+		fetch('https://swapi.dev/api/planets/'+ params.theid)
 		.then( (response) => response.json())
-		.then( (data) => setPersonaje(data.results))
+		.then( (data) => setPeople(data.result))
 	}
 
 	useEffect(()=> {
-		getPpl()
+		getPlanets1()
 	},[]);
 
+	const { store, actions } = useContext(Context);
+	const params = useParams();
 	return (
 
 		<div className="container">
@@ -43,25 +42,23 @@ export const Single = props => {
 				<div class="row">
 					<div class="col">
 						<p>Name</p>
-						<p></p>
-					</div>
-					<div class="col">
-						<p>Birth Year</p>
 						<p>{props.name}</p>
 					</div>
 					<div class="col">
-						<p>Gender</p>
+						<p>Climate</p>
+					</div>
+					<div class="col">
+						<p>Population</p>
 						<p>{props.gender}</p>
 					</div>
 					<div class="col">
-						<p>Height</p>
-						<p>{props.name}</p>
+						<p>Orbital Period</p>
 					</div>
 					<div class="col">
-						<p>Skin Color</p>
+						<p>Rotarion Period</p>
 					</div>
 					<div class="col">
-						<p>Eye Color</p>
+						<p>Diameter</p>
 					</div>
 				</div>
 				<br/>
@@ -77,6 +74,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+Planet.propTypes = {
 	match: PropTypes.object
 };
