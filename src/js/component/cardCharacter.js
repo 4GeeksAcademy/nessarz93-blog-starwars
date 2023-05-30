@@ -13,7 +13,7 @@ export const CardCharacter = (props) => {
                     Hair color: {props.hair_color} <br/>
                     Eye-color: {props.eye_color}
                 </p>
-                <Link to="#" className="btn btn-primary">Learn more</Link>
+                <Link to={"/single/" + props.idc} className="btn btn-primary">Learn more</Link>
             </div>
             </div>
         </>
