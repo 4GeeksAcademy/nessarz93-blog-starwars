@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const Single = (props) => {
 
 	const [people, setPeople] = useState({});
 	function getPpl(){
@@ -30,14 +30,40 @@ export const Single = props => {
 					<div className="col-md-8">
 					<div className="card-body">
 						<h1 className="card-title">{params.theid}</h1>
-						<p className="card-text"></p>
-						<p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+						<p className="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
 					</div>
 					</div>
 				</div>
 			</div>
 
-			<hr className="my-4" />
+			<hr className="my-4 text-danger" />
+
+			<div class="container text-center text-danger">
+				<div class="row">
+					<div class="col">
+						<p>Name</p>
+						<p>{props.name}</p>
+					</div>
+					<div class="col">
+						<p>Birth Year</p>
+					</div>
+					<div class="col">
+						<p>Gender</p>
+						<p>{props.gender}</p>
+					</div>
+					<div class="col">
+						<p>Height</p>
+					</div>
+					<div class="col">
+						<p>Skin Color</p>
+					</div>
+					<div class="col">
+						<p>Eye Color</p>
+					</div>
+				</div>
+				<br/>
+			</div>
+			
 
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
