@@ -9,7 +9,7 @@ export const Home = () => {
 	const [people, setPeople] = useState([]);
 	function getPeople(){
 		console.log('getPeople')
-		fetch('https://www.swapi.tech/api/people')
+		fetch('https://www.swapi.tech/api/people/')
 		.then( (response) => response.json())
 		.then( (data) => setPeople(data.results))
 		// .then((data)=> console.log(data.results))
@@ -18,7 +18,7 @@ export const Home = () => {
 	const [planets, setPlanets] = useState([]);
 	function getPlanets(){
 		console.log('getPlanets')
-		fetch('https://swapi.dev/api/planets')
+		fetch('https://www.swapi.tech/api/planets')
 		.then( (response) => response.json())
 		.then( (data) => setPlanets(data.results))
 	}
@@ -42,7 +42,7 @@ export const Home = () => {
 		{/*Espacio para Planetas*/}
 		<h2 className="text-danger m-3">Planets</h2>
 		<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
-				{planets.map( (planet)=> <CardPlanet className="col-xs-4" idc={planet.name} name={planet.name} population={planet.population} terrain={planet.terrain}/>)}
+				{planets.map( (planet)=> <CardPlanet className="col-xs-4" idp={planet.uid} name={planet.name} population={planet.population} terrain={planet.terrain}/>)}
 		</div>
 		
 	</div>

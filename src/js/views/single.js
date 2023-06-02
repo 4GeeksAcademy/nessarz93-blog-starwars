@@ -47,26 +47,27 @@ export const Single = props => {
 				<div className="row">
 					<div className="col">
 						<p>Name</p>
-						{/* <p>{personaje.name}</p> */}
+						<p>{personaje.name}</p>
 					</div>
 					<div className="col">
 						<p>Birth Year</p>
-						<p>{props.name}</p>
+						<p>{personaje.birth_year}</p>
 					</div>
 					<div className="col">
 						<p>Gender</p>
-						<p>{props.gender}</p>
+						<p>{personaje.gender}</p>
 					</div>
 					<div className="col">
 						<p>Height</p>
-						<p>{props.name}</p>
+						<p>{personaje.height}</p>
 					</div>
 					<div className="col">
 						<p>Skin Color</p>
-						<p>{props.name}</p>
+						<p>{personaje.skin_color}</p>
 					</div>
 					<div className="col">
 						<p>Eye Color</p>
+						<p>{personaje.eye_color}</p>
 					</div>
 				</div>
 				<br/>
