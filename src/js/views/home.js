@@ -9,9 +9,10 @@ export const Home = () => {
 	const [people, setPeople] = useState([]);
 	function getPeople(){
 		console.log('getPeople')
-		fetch('https://swapi.dev/api/people')
+		fetch('https://www.swapi.tech/api/people')
 		.then( (response) => response.json())
 		.then( (data) => setPeople(data.results))
+		// .then((data)=> console.log(data.results))
 	}
 
 	const [planets, setPlanets] = useState([]);
@@ -25,9 +26,6 @@ export const Home = () => {
 //Iniciar API al cargar la página -Personajes
 	useEffect(()=> {
 		getPeople()
-	},[]);
-
-	useEffect(()=> {
 		getPlanets()
 	},[]);
 
@@ -38,7 +36,7 @@ export const Home = () => {
 		{/*Espacio para personajes*/}
 		<h2 className="text-danger m-3">Characters</h2>
 		<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
-				{people.map( (ppl) => <CardCharacter className="col-xs-4"  idc={ppl.name} name={ppl.name} gender={ppl.gender} hair_color={ppl.hair_color} eye_color={ppl.eye_color}/>)}
+				{people.map( (ppl) => <CardCharacter className="col-xs-4"  idc={ppl.uid} name={ppl.name} gender={ppl.gender} hair_color={ppl.hair_color} eye_color={ppl.eye_color}/>)}
 		</div>
 
 		{/*Espacio para Planetas*/}
