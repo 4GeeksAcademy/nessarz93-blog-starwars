@@ -6,7 +6,7 @@ import CardPlanet from "../component/cardPlanets";
 
 export const Home = () => {
 
-
+const{store} = useContext(Context)
 
 //Traer el API de personajes
 	const [people, setPeople] = useState([]);

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const CardCharacter = (props) => {
 
-    const {store} = useContext(Context)
+    const {store, actions} = useContext(Context)
 
 	return (
         <>
@@ -18,6 +18,7 @@ export const CardCharacter = (props) => {
                     Eye-color: {props.eye_color}
                 </p>
                 <Link to={"/single/" + props.idc} className="btn btn-primary">Learn more</Link>
+                <button type="button" class="btn btn-warning m-3" onClick={()=> actions.agregarFav()}>Add</button>
             </div>
             </div>
         </>

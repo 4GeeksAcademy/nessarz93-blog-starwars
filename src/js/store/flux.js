@@ -27,6 +27,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+			agregarFav: () => {
+				console.log("Agregar mensaje")
+				setStore({ message: "Agregado" })
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
