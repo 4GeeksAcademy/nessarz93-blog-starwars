@@ -10,7 +10,7 @@ export const Planet = props => {
 		console.log('getPpl')
 		fetch(('https://www.swapi.tech/api/planets/'+ params.theid))
 		.then( (response) => response.json())
-		.then( (data) => setPeople(data.result.properties))
+		.then( (data) => setPlanets1(data.result.properties))
 	}
 
 	useEffect(()=> {
@@ -46,6 +46,7 @@ export const Planet = props => {
 					</div>
 					<div class="col">
 						<p>Climate</p>
+						<p>{planets1.climate}</p>
 					</div>
 					<div class="col">
 						<p>Population</p>
@@ -53,7 +54,7 @@ export const Planet = props => {
 					</div>
 					<div class="col">
 						<p>Orbital Period</p>
-						<p>{planets1.orbital_periodn}</p>
+						<p>{planets1.orbital_period}</p>
 					</div>
 					<div class="col">
 						<p>Rotation Period</p>

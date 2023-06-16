@@ -1,7 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const CardCharacter = (props) => {
+
+    const {store} = useContext(Context)
+
 	return (
         <>
             <div className="card m-2" style={{width: "18rem"}}>
